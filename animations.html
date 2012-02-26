@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	
+	<title>Animations</title>
+	
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" />
+	<link href="css/animations.css" rel="stylesheet" />
+	<style>
+	body{color:#222222;font-family:"Open Sans",sans-serif;overflow-x:hidden;margin:0;}
+	ul{display:block;list-style:none;margin:25% 0;padding:0;}
+	ul li{background-color:#0F0F0F;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;color:#FFFFFF;cursor:pointer;height:300px;line-height:300px;margin:0 auto;position:relative;text-align:center;vertical-align:top;width:300px;z-index:99;}
+	ul li+li{margin-top:50%;}
+	ul li.placeholder{background-color:rgba(255, 255, 255, 0.3);-webkit-box-shadow:0 1px 1px rgba(0, 0, 0, 0.3);-moz-box-shadow:0 1px 1px rgba(0, 0, 0, 0.3);box-shadow:0 1px 1px rgba(0, 0, 0, 0.3);color:#222222;margin-top:-300px;z-index:0;}
+	</style>
+</head>
+
+<body>
+	<ul>
+		<li class="animations bounce">bounce</li>
+		<li class="animations fade in">fade in</li>
+		<li class="animations fade out">fade out</li>
+		<li class="animations pivot in">pivot in</li>
+		<li class="animations pivot out">pivot out</li>
+		<li class="animations pop">pop</li>
+		<li class="animations puff">puff</li>
+		<li class="animations scale in">scale in</li>
+		<li class="animations scale out">scale out</li>
+		<li class="animations shake horizontal">shake horizontal</li>
+		<li class="animations shake vertical">shake vertical</li>
+		<li class="animations toss in">toss in</li>
+		<li class="animations toss out">toss out</li>
+		<li class="animations twirl in">twirl in</li>
+		<li class="animations twirl out">twirl out</li>
+		<li class="animations wiggle">wiggle</li>
+	</ul>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){$("ul").delegate("li","click",function(){var a=$(this);(a.hasClass("placeholder")?a.prev("li"):a).addClass("running")}).find("li").each(function(){$(this).clone().attr("class","").addClass("placeholder").insertAfter(this)})});
+	</script>
+</body>
+</html>
