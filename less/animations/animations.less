@@ -1,0 +1,157 @@
+@import url("animations.keyframes.less");
+@import url("../prefixed/prefixed.less");
+
+.animations {
+.animation-play-state(paused);
+	
+	&.bounce {
+	.animation(bounce 1s both);
+	.in;
+	}
+	
+	&.fade {
+	
+		&.in {
+		.animation(fade-in 0.5s both);
+		}
+	
+		&.out {
+		.animation(fade-out 0.5s both);
+		}
+	}
+	
+	&.in {
+	visibility: hidden;
+	
+		&.running {
+		visibility: visible;
+		}
+	}
+	
+	&.out {
+	visibility: visible;
+	
+		&.running {
+		visibility: hidden;
+		}
+	}
+	
+	&.pivot {
+	.transform-origin(left top);
+	
+		&.in {
+		.animation(pivot-in 0.7s ease-in-out both);
+		}
+		
+		&.out {
+		.animation(pivot-out 0.7s ease-in-out both);
+		}
+	}
+	
+	&.pop {
+	.animation(pop 0.5s both);
+	.in;
+	}
+	
+	&.puff {
+	.animation(puff 0.7s cubic-bezier(0, 1, 1, 1) both);
+	.out;
+	}
+	
+	&.running {
+	.animation-play-state(running);
+	}
+	
+	&.scale {
+	
+		&.in {
+		.animation(scale-in 0.5s ease-out both);
+		}
+		
+		&.out {
+		.animation(scale-out 0.5s ease-in both);
+		}
+	}
+
+	&.slide-down {
+
+		&.in {
+		.animation(slide-down-in 0.5s both);
+		}
+
+		&.out {
+		.animation(slide-down-out 0.5s both);
+		}
+	}
+
+	&.slide-left {
+
+		&.in {
+		.animation(slide-left-in 0.5s both);
+		}
+
+		&.out {
+		.animation(slide-left-out 0.5s both);
+		}
+	}
+
+	&.slide-right {
+
+		&.in {
+		.animation(slide-right-in 0.5s both);
+		}
+
+		&.out {
+		.animation(slide-right-out 0.5s both);
+		}
+	}
+
+	&.slide-up {
+
+		&.in {
+		.animation(slide-up-in 0.5s both);
+		}
+
+		&.out {
+		.animation(slide-up-out 0.5s both);
+		}
+	}
+	
+	&.shake {
+		
+		&.horizontal {
+		.animation(shake-horizontal 0.5s both);
+		}
+		
+		&.vertical {
+		.animation(shake-vertical 0.5s both);
+		}
+	}
+	
+	&.toss {
+	.transform-origin(right center);
+	
+		&.in {
+		.animation(toss-in 0.5s ease-in-out both);
+		}
+		
+		&.out {
+		.animation(toss-out 0.5s ease-in-out both);
+		}
+	}
+	
+	&.twirl {
+	
+		&.in {
+		.animation(twirl-in 1s cubic-bezier(0, 0, 0, 1) both);
+		}
+		
+		&.out {
+		.animation(twirl-out 1s cubic-bezier(0, 0, 1, 0) both);
+		}
+	}
+	
+	&.wiggle {
+	.animation(wiggle 0.7s);
+	}
+}

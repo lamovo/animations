@@ -1,0 +1,1 @@
+$(document).ready(function(){$("ul").delegate("li span","click",function(){var e=$(this);(e.hasClass("placeholder")?e.prev("li span"):e).addClass("running")}).find("li span").each(function(){$(this).clone().attr("class","").addClass("placeholder").insertAfter(this)})});
