@@ -149,7 +149,7 @@
 @-moz-keyframes slide-left-in {
   0% {
     opacity: 0;
-    -moz-transform: translatex(-100%);
+    -moz-transform: translatex(100%);
   }
   100% {
     opacity: 1;
@@ -171,7 +171,7 @@
 @-moz-keyframes slide-right-in {
   0% {
     opacity: 0;
-    -moz-transform: translatex(100%);
+    -moz-transform: translatex(-100%);
   }
   100% {
     opacity: 1;
